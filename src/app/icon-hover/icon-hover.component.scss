@@ -1,0 +1,83 @@
+.simple-section {
+  background-color: #f5f6f8;
+}
+
+.container {
+  max-width: 1200px;
+  // max-height: 900px;
+  height: 100vh;
+
+  .container-bottom {
+    top: 100px;
+    left: 100px;
+    height: 355px;
+    width: 280px;
+    border-radius: 10px;
+    position: relative;
+  }
+}
+
+.icon-container {
+  position: absolute;
+  width: 18px;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: white;
+  transition: ease, width 0.4s ease, height 0.5s ease;
+  overflow: hidden;
+  transform-origin: bottom left;
+  margin-top: 30px;
+}
+
+.icon-container:hover {
+  width: 240px;
+  // height: 460px;
+  border: none;
+}
+
+.container-bottom:has(.icon-container:hover) {
+  background-color: white;
+}
+
+.title {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon {
+  width: 40px;
+  position: relative;
+}
+
+.icon-title {
+  margin-left: 10px;
+  position: absolute;
+  display: none;
+  color: #808080;
+}
+
+.icon-container:hover .icon-title {
+  display: block;
+  padding-left: 30px;
+}
+
+.see-all {
+  font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #808080;
+}
+.icon-container:hover .see-all {
+  position: absolute;
+  right: 120px;
+}

@@ -1,0 +1,11 @@
+<div class="div1">
+  <div
+    class="div2"
+    [ngClass]="{ active: isActive }"
+    (click)="toggleDiv()"
+    (mouseover)="showDiv2()"
+    (mouseleave)="hideDiv2()"
+  >
+    <div class="div3" *ngIf="isDiv2Visible" (click)="handleHover($event)"></div>
+  </div>
+</div>

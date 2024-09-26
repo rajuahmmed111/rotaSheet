@@ -1,0 +1,24 @@
+<section class="simple-section">
+
+  <div class="container">
+    <div class="container-bottom">
+      <div
+        class="icon-container"
+        (mouseover)="hover = true"
+        (mouseout)="hover = false"
+      >
+        <div class="title" *ngIf="hover">Included in the package</div>
+        <div
+          class="icon-wrapper"
+          *ngFor="let icon of icons"
+          [class.selected]="icon.selected"
+        >
+          <!-- <img [src]="icon.src" alt="icon" class="icon" /> -->
+          <span class="icon" [innerHTML]="icon.src | safeHtmlCustom"></span>
+          <span class="icon-title">{{ icon.title }}</span>
+        </div>
+        <a href="#" class="see-all">See All</a>
+      </div>
+    </div>
+  </div>
+</section>

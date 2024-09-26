@@ -1,0 +1,28 @@
+<section class="left-hover-icon-right-section">
+  <div class="left-hover-icon-right-container">
+    <div class="left-hover-icon-right-container-bottom">
+      <div
+        class="left-hover-icon-right-icon-container"
+        (mouseover)="hover = true"
+        (mouseout)="hover = false"
+      >
+        <div class="left-hover-icon-right-icon-container-title" *ngIf="hover">Included in the package</div>
+
+        <div class="left-hover-icon-right-icon-container-icon-wrapper-top">
+          <div
+            class="left-hover-icon-right-icon-container-icon-wrapper"
+            *ngFor="let icon of icons; let i = index"
+            [class.selected]="selectedIcon === i"
+            (mouseover)="onMouseEnter(i)"
+            (mouseleave)="onMouseLeave()"
+            (click)="onClick(i)"
+          >
+            <span class="left-hover-icon-right-icon-container-icon-wrapper-icon" [innerHTML]="icon.src | safeHtmlCustom"></span>
+            <span class="left-hover-icon-right-icon-container-icon-wrapper-icon-title">{{ icon.title }}</span>
+          </div>
+        </div>
+        <a href="#" class="left-hover-icon-right-icon-container-see-all">See All</a>
+      </div>
+    </div>
+  </div>
+</section>

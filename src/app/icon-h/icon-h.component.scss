@@ -1,0 +1,109 @@
+.left-hover-icon-right-section {
+  background-color: #b8bdbd;
+}
+
+.left-hover-icon-right-container {
+  max-width: 1200px;
+  height: 100vh;
+
+  .left-hover-icon-right-container-bottom {
+    top: 100px;
+    left: 100px;
+    height: 410px;
+    width: 240px;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.left-hover-icon-right-icon-container {
+  position: absolute;
+  width: 50px;
+  height: 376px;
+  border-radius: 7px;
+  background-color: white;
+  transition: ease, width 0.5s ease, height 0.5s ease;
+  overflow: hidden;
+  transform-origin: bottom left;
+  margin-top: 30px;
+}
+
+.left-hover-icon-right-icon-container:hover {
+  width: 240px;
+  border: none;
+}
+
+.left-hover-icon-right-container-bottom:has(
+    .left-hover-icon-right-icon-container-icon-wrapper-top:hover
+  ) {
+  background-color: white;
+}
+
+.left-hover-icon-right-icon-container-title {
+  position: absolute;
+  top: -15px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  padding: 10px;
+}
+
+.left-hover-icon-right-icon-container-icon-wrapper-top {
+  margin-top: 20px;
+}
+
+.left-hover-icon-right-icon-container-icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+}
+
+.left-hover-icon-right-icon-container-icon-wrapper-icon {
+  padding: 4px 0 4px 10px;
+  width: 40px;
+  position: relative;
+  color: green;
+}
+
+.left-hover-icon-right-icon-container-icon-wrapper-icon-title {
+  margin-left: 10px;
+  position: absolute;
+  display: none;
+  color: #808080;
+  padding: 7px 0;
+  border-radius: 3px;
+}
+
+.left-hover-icon-right-icon-container:hover .left-hover-icon-right-icon-container-icon-wrapper-icon-title {
+  display: block;
+  padding-left: 40px;
+}
+
+.left-hover-icon-right-icon-container-see-all {
+  font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  color: #808080;
+}
+.left-hover-icon-right-icon-container:hover .left-hover-icon-right-icon-container-see-all {
+  position: absolute;
+  right: 110px;
+}
+
+.left-hover-icon-right-icon-container-icon-wrapper.selected span,
+.left-hover-icon-right-icon-container-icon-wrapper:hover span {
+  width: 100%;
+  background-color: #bdffed;
+  border-left: 3px solid green;
+}
+
+.left-hover-icon-right-icon-container-icon-wrapper.selected .left-hover-icon-right-icon-container-icon-wrapper-icon-title,
+.left-hover-icon-right-icon-container-icon-wrapper:hover .left-hover-icon-right-icon-container-icon-wrapper-icon-title {
+  margin-left: 33px;
+  border-left: none;
+  color: green;
+  font-weight: 500;
+}
